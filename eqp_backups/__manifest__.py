@@ -22,7 +22,7 @@
     ],
     "depends": ["base", "mail"],
     "data": [
-        "security/eqp_backups_security.xml",
+        "security/eqp_backup_security.xml",
         "security/ir.model.access.csv",
         "data/mail_template_data.xml",
         "wizard/backup_dropbox_token_assignment_wizard_views.xml",
