@@ -1,5 +1,5 @@
 {
-    "name": "Automatic Backup",
+    "name": "Automatic Backups",
     "summary": "Automates Odoo DB/filestore backups, allowing users to schedule and manage routine backups effortlessly.",
     "description": """
         The EQP Automatic Backup module for Odoo simplifies data protection by automating database and filestore
@@ -22,7 +22,7 @@
     ],
     "depends": ["base", "mail"],
     "data": [
-        "security/eqp_backups_security.xml",
+        "security/eqp_backup_security.xml",
         "security/ir.model.access.csv",
         "data/mail_template_data.xml",
         "wizard/backup_dropbox_token_assignment_wizard_views.xml",
