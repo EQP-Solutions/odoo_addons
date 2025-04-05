@@ -14,7 +14,7 @@
     "version": "18.0.1.0",
     "category": "Tools",
     "license": "LGPL-3",
-    "images": ["static/description/eqp_backups.gif"],
+    "images": ["static/description/eqp_backup.gif"],
     "author": "EQP Solutions",
     "website": "https://www.eqpsolutions.com/",
     "contributors": [
