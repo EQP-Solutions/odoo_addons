@@ -556,3 +556,219 @@ msgstr "Processus de sauvegarde Dropbox exécuté avec succès."
 #, python-format
 msgid "%s (copy)"
 msgstr "%s (copie)"
+
+#. module: eqp_backups
+#: model:ir.model.fields,field_description:eqp_backups.field_res_company__eqp_backups_enable_local
+msgid "Activate Local Functionality"
+msgstr "Activer la fonctionnalité locale"
+
+#. module: eqp_backups
+#: model:ir.model.fields,help:eqp_backups.field_res_company__eqp_backups_enable_local
+msgid "This policy will activate the Local Backup functionality."
+msgstr "Cette politique activera la fonctionnalité de sauvegarde locale."
+
+#. module: eqp_backups
+#: model:ir.model.fields,field_description:eqp_backups.field_res_company__eqp_backups_enable_sftp
+msgid "Activate SFTP Functionality"
+msgstr "Activer la fonctionnalité SFTP"
+
+#. module: eqp_backups
+#: model:ir.model.fields,help:eqp_backups.field_res_company__eqp_backups_enable_sftp
+msgid "This policy will activate the Secure File Transfer Protocol (SFTP) transfer functionality."
+msgstr "Cette politique activera la fonctionnalité de transfert via le protocole de transfert de fichiers sécurisé (SFTP)."
+
+#. module: eqp_backups
+#: model:ir.model.fields,field_description:eqp_backups.field_res_company__eqp_backups_enable_drive
+msgid "Activate Google Drive Functionality"
+msgstr "Activer la fonctionnalité Google Drive"
+
+#. module: eqp_backups
+#: model:ir.model.fields,help:eqp_backups.field_res_company__eqp_backups_enable_drive
+msgid "This policy will activate the Google Drive transfer functionality."
+msgstr "Cette politique activera la fonctionnalité de transfert via Google Drive."
+
+#. module: eqp_backups
+#: model:ir.model.fields,field_description:eqp_backups.field_res_company__eqp_backups_enable_dropbox
+msgid "Activate Dropbox Functionality"
+msgstr "Activer la fonctionnalité Dropbox"
+
+#. module: eqp_backups
+#: model:ir.model.fields,help:eqp_backups.field_res_company__eqp_backups_enable_dropbox
+msgid "This policy will activate the Dropbox transfer functionality."
+msgstr "Cette politique activera la fonctionnalité de transfert via Dropbox."
+
+#. module: eqp_backups
+#: model:ir.model.fields,field_description:eqp_backups.field_res_company__eqp_backups_enable_success_email
+msgid "Activate Success Email Notification"
+msgstr "Activer les notifications par email en cas de succès"
+
+#. module: eqp_backups
+#: model:ir.model.fields,help:eqp_backups.field_res_company__eqp_backups_enable_success_email
+msgid "This policy activates automatic email notifications upon successful completion of a backup process."
+msgstr "Cette politique active les notifications automatiques par email lors de la réussite d'un processus de sauvegarde."
+
+#. module: eqp_backups
+#: model:ir.model.fields,field_description:eqp_backups.field_res_company__eqp_backups_enable_failure_email
+msgid "Activate Failure Email Notification"
+msgstr "Activer les notifications par email en cas d'échec"
+
+#. module: eqp_backups
+#: model:ir.model.fields,help:eqp_backups.field_res_company__eqp_backups_enable_failure_email
+msgid "This policy activates automatic email notifications upon failure of a backup process."
+msgstr "Cette politique active les notifications automatiques par email lors de l'échec d'un processus de sauvegarde."
+
+#. module: eqp_backups
+#: model:ir.model.fields,field_description:eqp_backups.field_res_company__eqp_backups_success_email_address
+msgid "Additional email addresses for Success Notifications"
+msgstr "Adresses email supplémentaires pour les notifications de succès"
+
+#. module: eqp_backups
+#: model:ir.model.fields,help:eqp_backups.field_res_company__eqp_backups_success_email_address
+msgid "By default, the system sends notifications to the responsible user of the backup record. However, here you can add additional email addresses for notification if needed."
+msgstr "Par défaut, le système envoie des notifications à l'utilisateur responsable de l'enregistrement de sauvegarde. Cependant, vous pouvez ajouter ici des adresses email supplémentaires pour la notification si nécessaire."
+
+#. module: eqp_backups
+#: model:ir.model.fields,field_description:eqp_backups.field_res_company__eqp_backups_failure_email_address
+msgid "Additional email addresses for Failure Notifications"
+msgstr "Adresses email supplémentaires pour les notifications d'échec"
+
+#. module: eqp_backups
+#: model:ir.model.fields,help:eqp_backups.field_res_company__eqp_backups_failure_email_address
+msgid "By default, the system sends notifications to the responsible user of the backup record. However, here you can add additional email addresses for notification if needed."
+msgstr "Par défaut, le système envoie des notifications à l'utilisateur responsable de l'enregistrement de sauvegarde. Cependant, vous pouvez ajouter ici des adresses email supplémentaires pour la notification si nécessaire."
+
+#. module: eqp_backups
+#: model:ir.model,name:eqp_backups.model_backup_dropbox_token_assignment_wizard
+msgid "Dropbox Token Assignment"
+msgstr "Attribution de jeton Dropbox"
+
+#. module: eqp_backups
+#: model:ir.model.fields,field_description:eqp_backups.field_backup_dropbox_token_assignment_wizard__server_id
+msgid "Related Server"
+msgstr "Serveur associé"
+
+#. module: eqp_backups
+#: model:ir.model.fields,field_description:eqp_backups.field_backup_dropbox_token_assignment_wizard__dropbox_auth_url
+msgid "Authentication URL"
+msgstr "URL d'authentification"
+
+#. module: eqp_backups
+#: model:ir.model.fields,help:eqp_backups.field_backup_dropbox_token_assignment_wizard__dropbox_auth_url
+msgid "Please complete the authorization process by following the instructions provided at the following URL."
+msgstr "Veuillez compléter le processus d'autorisation en suivant les instructions fournies à l'URL suivante."
+
+#. module: eqp_backups
+#: model:ir.model.fields,field_description:eqp_backups.field_backup_dropbox_token_assignment_wizard__dropbox_access_code
+msgid "Access Code"
+msgstr "Code d'accès"
+
+#. module: eqp_backups
+#: model:ir.model.fields,help:eqp_backups.field_backup_dropbox_token_assignment_wizard__dropbox_access_code
+msgid "Please enter the access code received after completing the authorization process via the URL displayed at the top of this window."
+msgstr "Veuillez saisir le code d'accès reçu après avoir complété le processus d'autorisation via l'URL affichée en haut de cette fenêtre."
+
+#. module: eqp_backups
+#: model_terms:ir.ui.view,arch_db:eqp_backups.backup_dropbox_token_assignment_wizard_view_form
+msgid "Please use the URL provided above to complete the authorization steps. Once you reach the Access Code Generation step, copy the code and paste it into the Access Code field below this message. After entering the Access Code, please press the 'Set New Token' button to generate the token."
+msgstr "Veuillez utiliser l'URL fournie ci-dessus pour compléter les étapes d'autorisation. Une fois que vous atteignez l'étape de génération du code d'accès, copiez le code et collez-le dans le champ Code d'accès ci-dessous. Après avoir saisi le code d'accès, veuillez appuyer sur le bouton 'Définir un nouveau jeton' pour générer le jeton."
+
+#. module: eqp_backups
+#: model_terms:ir.ui.view,arch_db:eqp_backups.backup_dropbox_token_assignment_wizard_view_form
+msgid "Set New Token"
+msgstr "Définir un nouveau jeton"
+
+#. module: eqp_backups
+#: model_terms:ir.ui.view,arch_db:eqp_backups.backup_dropbox_token_assignment_wizard_view_form
+msgid "Cancel"
+msgstr "Annuler"
+
+#. module: eqp_backups
+#: code:addons/eqp_backups/wizard/backup_dropbox_token_assignment_wizard.py:0
+#, python-format
+msgid "Error: Missing Dropbox Access Code. Please ensure set the Access Code to set a New Token."
+msgstr "Erreur : Code d'accès Dropbox manquant. Veuillez vous assurer de définir le code d'accès pour créer un nouveau jeton."
+
+#. module: eqp_backups
+#: model_terms:ir.ui.view,arch_db:eqp_backups.res_config_settings_view_form
+msgid "DB Backups"
+msgstr "Sauvegardes BDD"
+
+#. module: eqp_backups
+#: model_terms:ir.ui.view,arch_db:eqp_backups.res_config_settings_view_form
+msgid "DB Automatic Backups"
+msgstr "Sauvegardes automatiques BDD"
+
+#. module: eqp_backups
+#: model_terms:ir.ui.view,arch_db:eqp_backups.res_config_settings_view_form
+msgid "Enable Local Backups."
+msgstr "Activer les sauvegardes locales."
+
+#. module: eqp_backups
+#: model_terms:ir.ui.view,arch_db:eqp_backups.res_config_settings_view_form
+msgid "Enable SFTP Server Backups."
+msgstr "Activer les sauvegardes sur serveur SFTP."
+
+#. module: eqp_backups
+#: model_terms:ir.ui.view,arch_db:eqp_backups.res_config_settings_view_form
+msgid "Enable Google Drive Backups."
+msgstr "Activer les sauvegardes Google Drive."
+
+#. module: eqp_backups
+#: model_terms:ir.ui.view,arch_db:eqp_backups.res_config_settings_view_form
+msgid "Enable Dropbox Backups."
+msgstr "Activer les sauvegardes Dropbox."
+
+#. module: eqp_backups
+#: model_terms:ir.ui.view,arch_db:eqp_backups.res_config_settings_view_form
+msgid "Activate Success Email Notification"
+msgstr "Activer les notifications par email en cas de succès"
+
+#. module: eqp_backups
+#: model_terms:ir.ui.view,arch_db:eqp_backups.res_config_settings_view_form
+msgid "Activate Failure Email Notification"
+msgstr "Activer les notifications par email en cas d'échec"
+
+#. module: eqp_backups
+#: model_terms:ir.ui.view,arch_db:eqp_backups.res_config_settings_view_form
+msgid "By default, the system sends notifications to the responsible user of the backup record. However, here you can add additional email addresses for notification if needed."
+msgstr "Par défaut, le système envoie des notifications à l'utilisateur responsable de l'enregistrement de sauvegarde. Cependant, vous pouvez ajouter ici des adresses email supplémentaires pour la notification si nécessaire."
+
+#. module: eqp_backups
+#: model:ir.model.fields,field_description:eqp_backups.field_res_config_settings__eqp_backups_enable_local
+msgid "Activate Local Functionality"
+msgstr "Activer la fonctionnalité locale"
+
+#. module: eqp_backups
+#: model:ir.model.fields,field_description:eqp_backups.field_res_config_settings__eqp_backups_enable_sftp
+msgid "Activate SFTP Functionality" 
+msgstr "Activer la fonctionnalité SFTP"
+
+#. module: eqp_backups
+#: model:ir.model.fields,field_description:eqp_backups.field_res_config_settings__eqp_backups_enable_drive
+msgid "Activate Google Drive Functionality"
+msgstr "Activer la fonctionnalité Google Drive"
+
+#. module: eqp_backups
+#: model:ir.model.fields,field_description:eqp_backups.field_res_config_settings__eqp_backups_enable_dropbox
+msgid "Activate Dropbox Functionality"
+msgstr "Activer la fonctionnalité Dropbox"
+
+#. module: eqp_backups
+#: model:ir.model.fields,field_description:eqp_backups.field_res_config_settings__eqp_backups_enable_success_email
+msgid "Activate Success Email Notification"
+msgstr "Activer les notifications par email en cas de succès"
+
+#. module: eqp_backups
+#: model:ir.model.fields,field_description:eqp_backups.field_res_config_settings__eqp_backups_enable_failure_email
+msgid "Activate Failure Email Notification"
+msgstr "Activer les notifications par email en cas d'échec"
+
+#. module: eqp_backups
+#: model:ir.model.fields,field_description:eqp_backups.field_res_config_settings__eqp_backups_success_email_address
+msgid "Additional email addresses for Success Notifications"
+msgstr "Adresses email supplémentaires pour les notifications de succès"
+
+#. module: eqp_backups
+#: model:ir.model.fields,field_description:eqp_backups.field_res_config_settings__eqp_backups_failure_email_address
+msgid "Additional email addresses for Failure Notifications"
+msgstr "Adresses email supplémentaires pour les notifications d'échec"
