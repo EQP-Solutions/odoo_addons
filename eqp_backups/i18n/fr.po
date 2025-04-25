@@ -1,0 +1,558 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* eqp_backups
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 18.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-04-25 14:30+0000\n"
+"PO-Revision-Date: 2025-04-25 14:30+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: eqp_backups
+#: model:ir.model.fields,help:eqp_backups.field_backup_record__active
+msgid "Set active to false to hide the record without removing it."
+msgstr "Définir sur inactif pour masquer l'enregistrement sans le supprimer."
+
+#. module: eqp_backups
+#: model:ir.model.fields,help:eqp_backups.field_backup_record__user_id
+msgid "Assign a responsible user for this Backup Record."
+msgstr "Assigner un utilisateur responsable pour cet enregistrement de sauvegarde."
+
+#. module: eqp_backups
+#: model:ir.model.fields,help:eqp_backups.field_backup_record__name
+msgid "Record Name"
+msgstr "Nom de l'enregistrement"
+
+#. module: eqp_backups
+#: model:ir.model.fields,help:eqp_backups.field_backup_record__description
+msgid "Add a brief description of the record"
+msgstr "Ajouter une brève description de l'enregistrement"
+
+#. module: eqp_backups
+#: model:ir.model.fields,help:eqp_backups.field_backup_record__db_name
+msgid "Data Base name"
+msgstr "Nom de la base de données"
+
+#. module: eqp_backups
+#: model:ir.model.fields,help:eqp_backups.field_backup_record__frequency
+msgid "Select the frequency at which you would like your backups to be generated."
+msgstr "Sélectionnez la fréquence à laquelle vous souhaitez que vos sauvegardes soient générées."
+
+#. module: eqp_backups
+#: model:ir.model.fields,help:eqp_backups.field_backup_record__type
+msgid ""
+"Select the type of backup to execute:\n"
+"- Full (DB & FS): Backs up both the database and file store.\n"
+"- Database Only: Backs up only the database.\n"
+"- File Store Only: Backs up only the file storage (attachments and other media)."
+msgstr ""
+"Sélectionnez le type de sauvegarde à exécuter :\n"
+"- Complet (BDD & FS) : Sauvegarde à la fois la base de données et le stockage de fichiers.\n"
+"- Base de données uniquement : Sauvegarde uniquement la base de données.\n"
+"- Stockage de fichiers uniquement : Sauvegarde uniquement le stockage de fichiers (pièces jointes et autres médias)."
+
+#. module: eqp_backups
+#: model:ir.model.fields,help:eqp_backups.field_backup_record__backup_lifespan_qty
+msgid ""
+"When the number of backups exceeds this limit, the system will "
+"automatically delete the older backups, ensuring that only the "
+"specified number of backups are retained.\n"
+"To DISABLE this functionality put '-1'."
+msgstr ""
+"Lorsque le nombre de sauvegardes dépasse cette limite, le système "
+"supprimera automatiquement les sauvegardes plus anciennes, garantissant que seul le "
+"nombre spécifié de sauvegardes est conservé.\n"
+"Pour DÉSACTIVER cette fonctionnalité, mettez '-1'."
+
+#. module: eqp_backups
+#: model:ir.model.fields,help:eqp_backups.field_backup_record__success_mail_send
+msgid "Send an email when the backup process is executed Successfully."
+msgstr "Envoyer un email lorsque le processus de sauvegarde est exécuté avec succès."
+
+#. module: eqp_backups
+#: model:ir.model.fields,help:eqp_backups.field_backup_record__failure_mail_send
+msgid "Send an email when the backup process present a Failure ."
+msgstr "Envoyer un email lorsque le processus de sauvegarde présente un échec."
+
+#. module: eqp_backups
+#: model:ir.model.fields,help:eqp_backups.field_backup_record__state
+msgid ""
+"Backup Record Status (If the status is 'Paused,' it indicates that the server is "
+"in a state other than 'confirmed.)"
+msgstr ""
+"Statut de l'enregistrement de sauvegarde (Si le statut est 'En pause', cela indique que le serveur est "
+"dans un état autre que 'confirmé'.)"
+
+#. module: eqp_backups
+#: model:ir.model.fields,help:eqp_backups.field_backup_record__server_id
+msgid "Select a Backup server (Only Confirmed Servers can be used)."
+msgstr "Sélectionner un serveur de sauvegarde (seuls les serveurs confirmés peuvent être utilisés)."
+
+#. module: eqp_backups
+#: model:ir.model.fields,help:eqp_backups.field_backup_record__chunk_size
+msgid ""
+"As the backup size could be very large we have to divide it in chunks: "
+"A reference basic guideline:\n\n"
+"Smaller files: For smaller files (up to a few hundred megabytes), a chunk size of 1MB to 5MB can be suitable.\n"
+"Medium-sized files: For files ranging from a few hundred megabytes to a few gigabytes, a chunk size of 5MB to 10MB is often appropriate.\n"
+"Large files: For very large files (several gigabytes or more), you may still want to use smaller chunk sizes (e.g., 5MB to 10MB) to ensure smoother handling and better resilience to network issues.\n"
+"Note: If set to 0 ('zero'), the system will use the default 'files_upload' method (without chunks)."
+msgstr ""
+"Comme la taille de la sauvegarde peut être très importante, nous devons la diviser en morceaux : "
+"Un guide de référence de base :\n\n"
+"Petits fichiers : Pour les fichiers plus petits (jusqu'à quelques centaines de mégaoctets), une taille de morceau de 1 Mo à 5 Mo peut convenir.\n"
+"Fichiers de taille moyenne : Pour les fichiers allant de quelques centaines de mégaoctets à quelques gigaoctets, une taille de morceau de 5 Mo à 10 Mo est souvent appropriée.\n"
+"Gros fichiers : Pour les très gros fichiers (plusieurs gigaoctets ou plus), vous voudrez peut-être toujours utiliser des tailles de morceaux plus petites (par exemple, 5 Mo à 10 Mo) pour assurer un traitement plus fluide et une meilleure résistance aux problèmes de réseau.\n"
+"Remarque : Si défini à 0 ('zéro'), le système utilisera la méthode 'files_upload' par défaut (sans morceaux)."
+
+#. module: eqp_backups
+#: model:ir.model.fields,help:eqp_backups.field_backup_record__cron_id
+msgid ""
+"Scheduled cron which ensures the automatic execution of backups at "
+"specific times."
+msgstr ""
+"Tâche planifiée qui assure l'exécution automatique des sauvegardes à "
+"des moments spécifiques."
+
+#. module: eqp_backups
+#: model:ir.model.fields,help:eqp_backups.field_backup_record__last_execution_result
+msgid "Access the details of the most recent execution here."
+msgstr "Accédez aux détails de l'exécution la plus récente ici."
+
+#. module: eqp_backups
+#: model:ir.model.constraint,message:eqp_backups.constraint_backup_record_name_unique
+msgid "A unique name per company."
+msgstr "Un nom unique par entreprise."
+
+#. module: eqp_backups
+#: model:ir.model.constraint,message:eqp_backups.constraint_backup_record_unique_cron_id
+msgid "One Cron should only have one BackUp record."
+msgstr "Une tâche planifiée ne devrait avoir qu'un seul enregistrement de sauvegarde."
+
+#. module: eqp_backups
+#: model:ir.model.constraint,message:eqp_backups.constraint_backup_record_check_backup_lifespan_qty
+msgid "The Backup span qty must be either -1 or greater than 1"
+msgstr "La durée de vie des sauvegardes doit être soit -1, soit supérieure à 1"
+
+#. module: eqp_backups
+#: model:ir.actions.act_window,name:eqp_backups.action_backup_record
+#: model:ir.ui.menu,name:eqp_backups.menu_backup_record
+msgid "Backup Records"
+msgstr "Enregistrements de sauvegarde"
+
+#. module: eqp_backups
+#: model:ir.actions.act_window,name:eqp_backups.action_eqp_backups_configuration
+msgid "Settings"
+msgstr "Paramètres"
+
+#. module: eqp_backups
+#: model:ir.ui.menu,name:eqp_backups.menu_eqp_backups_root
+msgid "DB Backups"
+msgstr "Sauvegardes BDD"
+
+#. module: eqp_backups
+#: model:ir.ui.menu,name:eqp_backups.menu_backup_record
+msgid "Records"
+msgstr "Enregistrements"
+
+#. module: eqp_backups
+#: model:ir.ui.menu,name:eqp_backups.menu_backup_configuration
+msgid "Configuration"
+msgstr "Configuration"
+
+#. module: eqp_backups
+#: model:ir.actions.act_window,name:eqp_backups.action_backup_server
+#: model:ir.ui.menu,name:eqp_backups.menu_backup_server
+msgid "Backup Servers"
+msgstr "Serveurs de sauvegarde"
+
+#. module: eqp_backups
+#: model:ir.ui.menu,name:eqp_backups.menu_backup_server
+msgid "Servers"
+msgstr "Serveurs"
+
+#. module: eqp_backups
+#: model_terms:ir.ui.view,arch_db:eqp_backups.view_backup_record_search
+#: model_terms:ir.ui.view,arch_db:eqp_backups.view_backup_server_search
+msgid "Backup Records"
+msgstr "Enregistrements de sauvegarde"
+
+#. module: eqp_backups
+#: model_terms:ir.ui.view,arch_db:eqp_backups.view_backup_record_form
+#: model_terms:ir.ui.view,arch_db:eqp_backups.view_backup_server_form
+msgid "Backup Record"
+msgstr "Enregistrement de sauvegarde"
+
+#. module: eqp_backups
+#: model_terms:ir.ui.view,arch_db:eqp_backups.view_backup_record_search
+#: model_terms:ir.ui.view,arch_db:eqp_backups.view_backup_server_search
+msgid "Active"
+msgstr "Actif"
+
+#. module: eqp_backups
+#: model_terms:ir.ui.view,arch_db:eqp_backups.view_backup_record_search
+#: model_terms:ir.ui.view,arch_db:eqp_backups.view_backup_server_search
+msgid "Inactive"
+msgstr "Inactif"
+
+#. module: eqp_backups
+#: model_terms:ir.ui.view,arch_db:eqp_backups.view_backup_record_search
+msgid "My Backups"
+msgstr "Mes sauvegardes"
+
+#. module: eqp_backups
+#: model_terms:ir.ui.view,arch_db:eqp_backups.view_backup_record_search
+#: model_terms:ir.ui.view,arch_db:eqp_backups.view_backup_server_search
+msgid "Group By"
+msgstr "Regrouper par"
+
+#. module: eqp_backups
+#: model_terms:ir.ui.view,arch_db:eqp_backups.view_backup_record_search
+msgid "Type"
+msgstr "Type"
+
+#. module: eqp_backups
+#: model_terms:ir.ui.view,arch_db:eqp_backups.view_backup_record_search
+msgid "Responsible"
+msgstr "Responsable"
+
+#. module: eqp_backups
+#: model_terms:ir.ui.view,arch_db:eqp_backups.view_backup_record_search
+msgid "Server"
+msgstr "Serveur"
+
+#. module: eqp_backups
+#: model_terms:ir.ui.view,arch_db:eqp_backups.view_backup_record_search
+msgid "Frequency"
+msgstr "Fréquence"
+
+#. module: eqp_backups
+#: model_terms:ir.ui.view,arch_db:eqp_backups.view_backup_server_search
+msgid "Backup Type"
+msgstr "Type de sauvegarde"
+
+#. module: eqp_backups
+#: model_terms:ir.ui.view,arch_db:eqp_backups.view_backup_server_search
+msgid "State"
+msgstr "État"
+
+#. module: eqp_backups
+#: model_terms:ir.ui.view,arch_db:eqp_backups.view_backup_record_form
+msgid "Confirm"
+msgstr "Confirmer"
+
+#. module: eqp_backups
+#: model_terms:ir.ui.view,arch_db:eqp_backups.view_backup_record_form
+msgid "Run BackUpManually"
+msgstr "Lancer la sauvegarde manuellement"
+
+#. module: eqp_backups
+#: model_terms:ir.ui.view,arch_db:eqp_backups.view_backup_record_form
+#: model_terms:ir.ui.view,arch_db:eqp_backups.view_backup_server_form
+msgid "Edit"
+msgstr "Éditer"
+
+#. module: eqp_backups
+#: model_terms:ir.ui.view,arch_db:eqp_backups.view_backup_record_form
+#: model_terms:ir.ui.view,arch_db:eqp_backups.view_backup_record_form
+msgid "Email Notifications:"
+msgstr "Notifications par email :"
+
+#. module: eqp_backups
+#: model_terms:ir.ui.view,arch_db:eqp_backups.view_backup_record_form
+msgid "When Succeeded"
+msgstr "En cas de succès"
+
+#. module: eqp_backups
+#: model_terms:ir.ui.view,arch_db:eqp_backups.view_backup_record_form
+msgid "When Failed"
+msgstr "En cas d'échec"
+
+#. module: eqp_backups
+#: model_terms:ir.ui.view,arch_db:eqp_backups.view_backup_record_form
+msgid "Update Data Bases List"
+msgstr "Mettre à jour la liste des bases de données"
+
+#. module: eqp_backups
+#: model_terms:ir.ui.view,arch_db:eqp_backups.view_backup_record_form
+msgid "Validate Database"
+msgstr "Valider la base de données"
+
+#. module: eqp_backups
+#: model_terms:ir.ui.view,arch_db:eqp_backups.view_backup_record_form
+msgid "description"
+msgstr "description"
+
+#. module: eqp_backups
+#: model_terms:ir.ui.view,arch_db:eqp_backups.view_backup_record_form
+msgid "Scheduled Action"
+msgstr "Action programmée"
+
+#. module: eqp_backups
+#: model_terms:ir.ui.view,arch_db:eqp_backups.view_backup_record_form
+msgid "Execution Details"
+msgstr "Détails d'exécution"
+
+#. module: eqp_backups
+#: model_terms:ir.ui.view,arch_db:eqp_backups.view_backup_server_form
+msgid "Test Connection &amp; Confirm"
+msgstr "Tester la connexion et confirmer"
+
+#. module: eqp_backups
+#: model_terms:ir.ui.view,arch_db:eqp_backups.view_backup_server_form
+msgid "Generate Token"
+msgstr "Générer un jeton"
+
+#. module: eqp_backups
+#: model_terms:ir.ui.view,arch_db:eqp_backups.view_backup_server_form
+msgid "Refresh Token"
+msgstr "Actualiser le jeton"
+
+#. module: eqp_backups
+#: model_terms:ir.ui.view,arch_db:eqp_backups.view_backup_server_form
+msgid "To apply any modifications, please transition the record to the 'Draft' state."
+msgstr "Pour appliquer des modifications, veuillez passer l'enregistrement à l'état 'Brouillon'."
+
+#. module: eqp_backups
+#: model_terms:ir.ui.view,arch_db:eqp_backups.view_backup_server_form
+msgid "Testing Area"
+msgstr "Zone de test"
+
+#. module: eqp_backups
+#: model_terms:ir.ui.view,arch_db:eqp_backups.view_backup_server_form
+msgid "Test Connection"
+msgstr "Tester la connexion"
+
+#. module: eqp_backups
+#: model_terms:ir.ui.view,arch_db:eqp_backups.view_backup_server_form
+msgid "Test File Transfer"
+msgstr "Tester le transfert de fichier"
+
+#. module: eqp_backups
+#: model_terms:ir.ui.view,arch_db:eqp_backups.view_backup_server_form
+msgid "Records"
+msgstr "Enregistrements"
+
+#. module: eqp_backups
+#: model:ir.model.fields,field_description:eqp_backups.field_backup_record__active
+msgid "Active"
+msgstr "Actif"
+
+#. module: eqp_backups
+#: model:ir.model.fields,field_description:eqp_backups.field_backup_record__company_id
+msgid "Company"
+msgstr "Société"
+
+#. module: eqp_backups
+#: model:ir.model.fields,field_description:eqp_backups.field_backup_record__user_id
+msgid "Responsible user"
+msgstr "Utilisateur responsable"
+
+#. module: eqp_backups
+#: model:ir.model.fields,field_description:eqp_backups.field_backup_record__name
+msgid "Name"
+msgstr "Nom"
+
+#. module: eqp_backups
+#: model:ir.model.fields,field_description:eqp_backups.field_backup_record__description
+msgid "Description"
+msgstr "Description"
+
+#. module: eqp_backups
+#: model:ir.model.fields,field_description:eqp_backups.field_backup_record__db_name
+msgid "Database Name"
+msgstr "Nom de la base de données"
+
+#. module: eqp_backups
+#: model:ir.model.fields,field_description:eqp_backups.field_backup_record__db_names
+msgid "Available Databases"
+msgstr "Bases de données disponibles"
+
+#. module: eqp_backups
+#: model:ir.model.fields,field_description:eqp_backups.field_backup_record__frequency
+msgid "Backup Frequency"
+msgstr "Fréquence de sauvegarde"
+
+#. module: eqp_backups
+#: model:ir.model.fields,field_description:eqp_backups.field_backup_record__type
+msgid "Type"
+msgstr "Type"
+
+#. module: eqp_backups
+#: model:ir.model.fields,field_description:eqp_backups.field_backup_record__backup_lifespan_qty
+msgid "Backup Lifespan qty"
+msgstr "Qté de sauvegardes à conserver"
+
+#. module: eqp_backups
+#: model:ir.model.fields,field_description:eqp_backups.field_backup_record__success_mail_send
+msgid "Email when Success"
+msgstr "Email en cas de succès"
+
+#. module: eqp_backups
+#: model:ir.model.fields,field_description:eqp_backups.field_backup_record__failure_mail_send
+msgid "Email when Failure"
+msgstr "Email en cas d'échec"
+
+#. module: eqp_backups
+#: model:ir.model.fields,field_description:eqp_backups.field_backup_record__state
+msgid "Status"
+msgstr "État"
+
+#. module: eqp_backups
+#: model:ir.model.fields,field_description:eqp_backups.field_backup_record__server_id
+msgid "Server"
+msgstr "Serveur"
+
+#. module: eqp_backups
+#: model:ir.model.fields,field_description:eqp_backups.field_backup_record__server_type
+msgid "Server Type"
+msgstr "Type de serveur"
+
+#. module: eqp_backups
+#: model:ir.model.fields,field_description:eqp_backups.field_backup_record__chunk_size
+msgid "Chunk Size (MB)"
+msgstr "Taille des morceaux (Mo)"
+
+#. module: eqp_backups
+#: model:ir.model.fields,field_description:eqp_backups.field_backup_record__cron_id
+msgid "Scheduled Action"
+msgstr "Action planifiée"
+
+#. module: eqp_backups
+#: model:ir.model.fields,field_description:eqp_backups.field_backup_record__last_execution_result
+msgid "Last Execution Result"
+msgstr "Résultat de la dernière exécution"
+
+#. module: eqp_backups
+#: model:ir.model.fields.selection,name:eqp_backups.selection__backup_record__frequency__years
+msgid "Yearly"
+msgstr "Annuellement"
+
+#. module: eqp_backups
+#: model:ir.model.fields.selection,name:eqp_backups.selection__backup_record__frequency__months
+msgid "Monthly"
+msgstr "Mensuellement"
+
+#. module: eqp_backups
+#: model:ir.model.fields.selection,name:eqp_backups.selection__backup_record__frequency__weeks
+msgid "Weekly"
+msgstr "Hebdomadairement"
+
+#. module: eqp_backups
+#: model:ir.model.fields.selection,name:eqp_backups.selection__backup_record__frequency__days
+msgid "Daily"
+msgstr "Quotidiennement"
+
+#. module: eqp_backups
+#: model:ir.model.fields.selection,name:eqp_backups.selection__backup_record__frequency__hours
+msgid "Hourly"
+msgstr "Toutes les heures"
+
+#. module: eqp_backups
+#: model:ir.model.fields.selection,name:eqp_backups.selection__backup_record__type__full
+msgid "Full (DB & FS)"
+msgstr "Complet (BDD & FS)"
+
+#. module: eqp_backups
+#: model:ir.model.fields.selection,name:eqp_backups.selection__backup_record__type__db
+msgid "Data Base"
+msgstr "Base de données"
+
+#. module: eqp_backups
+#: model:ir.model.fields.selection,name:eqp_backups.selection__backup_record__type__fs
+msgid "File Store"
+msgstr "Stockage de fichiers"
+
+#. module: eqp_backups
+#: model:ir.model.fields.selection,name:eqp_backups.selection__backup_record__state__draft
+msgid "Draft"
+msgstr "Brouillon"
+
+#. module: eqp_backups
+#: model:ir.model.fields.selection,name:eqp_backups.selection__backup_record__state__confirmed
+msgid "Confirmed"
+msgstr "Confirmé"
+
+#. module: eqp_backups
+#: model:ir.model.fields.selection,name:eqp_backups.selection__backup_record__state__paused
+msgid "Paused"
+msgstr "En pause"
+
+#. module: eqp_backups
+#: model:ir.model.fields.selection,name:eqp_backups.selection__backup_record__state__archived
+msgid "Archived"
+msgstr "Archivé"
+
+#. module: eqp_backups
+#: model:ir.module.module,name:eqp_backups.module_name
+msgid "Automatic Backups"
+msgstr "Sauvegardes automatiques"
+
+#. module: eqp_backups
+#: model:ir.module.module,summary:eqp_backups.module_summary
+msgid "Automates Odoo DB/filestore backups, allowing users to schedule and manage routine backups effortlessly."
+msgstr "Automatise les sauvegardes Odoo de la base de données et du stockage de fichiers, permettant aux utilisateurs de planifier et de gérer les sauvegardes de routine sans effort."
+
+#. module: eqp_backups
+#: model:ir.module.module,description:eqp_backups.module_description
+msgid ""
+"The EQP Automatic Backup module for Odoo simplifies data protection by automating database and filestore\n"
+"backups. Users can easily schedule routine backups and choose from various destinations such as local servers,\n"
+"SFTP, Google Drive, and Dropbox.\n"
+"The module offers configurable email notifications for specific processes, including independent settings for\n"
+"successful and failed backups.\n"
+"Efficient storage management is ensured by allowing users to set the number of retained backups, providing\n"
+"automated maintenance of the specified quantity of the most recent backups. With EQP Automatic Backup,\n"
+"users enjoy a streamlined and user-friendly solution for securing their Odoo data."
+msgstr ""
+"Le module EQP Sauvegardes automatiques pour Odoo simplifie la protection des données en automatisant les sauvegardes\n"
+"de base de données et de stockage de fichiers. Les utilisateurs peuvent facilement programmer des sauvegardes routinières\n"
+"et choisir parmi diverses destinations telles que les serveurs locaux, SFTP, Google Drive et Dropbox.\n"
+"Le module offre des notifications par e-mail configurables pour des processus spécifiques, y compris des paramètres indépendants\n"
+"pour les sauvegardes réussies et échouées.\n"
+"Une gestion efficace du stockage est assurée en permettant aux utilisateurs de définir le nombre de sauvegardes à conserver,\n"
+"fournissant une maintenance automatisée de la quantité spécifiée des sauvegardes les plus récentes. Avec EQP Sauvegardes automatiques,\n"
+"les utilisateurs bénéficient d'une solution rationalisée et conviviale pour sécuriser leurs données Odoo."
+
+#. module: eqp_backups
+#: code:addons/eqp_backups/models/backup_record.py:0
+#, python-format
+msgid "Database validation executed Successfully."
+msgstr "Validation de la base de données exécutée avec succès."
+
+#. module: eqp_backups
+#: code:addons/eqp_backups/models/backup_record.py:0
+#, python-format
+msgid "Local Backup process executed successfully."
+msgstr "Processus de sauvegarde locale exécuté avec succès."
+
+#. module: eqp_backups
+#: code:addons/eqp_backups/models/backup_record.py:0
+#, python-format
+msgid "SFTP Backup transference process executed successfully."
+msgstr "Processus de transfert de sauvegarde SFTP exécuté avec succès."
+
+#. module: eqp_backups
+#: code:addons/eqp_backups/models/backup_record.py:0
+#, python-format
+msgid "Google Drive Backup process executed successfully."
+msgstr "Processus de sauvegarde Google Drive exécuté avec succès."
+
+#. module: eqp_backups
+#: code:addons/eqp_backups/models/backup_record.py:0
+#, python-format
+msgid "Dropbox Backup process executed successfully."
+msgstr "Processus de sauvegarde Dropbox exécuté avec succès."
+
+#. module: eqp_backups
+#: code:addons/eqp_backups/models/backup_record.py:0
+#, python-format
+msgid "%s (copy)"
+msgstr "%s (copie)"
