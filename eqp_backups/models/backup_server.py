@@ -706,7 +706,7 @@ class BackupServer(models.Model):
                 # Create the file
                 file = (
                     service.files()
-                    .create(body=file_metadata, media_body=media, fields="id")
+                    .create(body=file_metadata, media_body=media, fields="id", supportsAllDrives=True)
                     .execute()
                 )
 
