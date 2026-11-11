@@ -61,7 +61,7 @@
                         <button name="validate_db" type="object" class="btn-primary"
                                 string="Confirm" invisible="state!='draft'" context="{'confirm': True}"/>
                         <button name="manual_execution" type="object" class="btn-warning"
-                                string="Run BackUpManually" invisible="state!='confirmed'"/>
+                                string="Run Backup Manually" invisible="state!='confirmed'"/>
 
                         <button name="revert_state" type="object" class="btn-secondary"
                                 string="Edit" invisible="state!='confirmed'"

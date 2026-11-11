@@ -250,7 +250,7 @@ msgstr "Confirmer"
 
 #. module: eqp_backups
 #: model_terms:ir.ui.view,arch_db:eqp_backups.view_backup_record_form
-msgid "Run BackUpManually"
+msgid "Run Backup Manually"
 msgstr "Lancer la sauvegarde manuellement"
 
 #. module: eqp_backups
