@@ -22,6 +22,7 @@ TestBackupServer:
   - test_credentials_ok_sftp_false_without_password
   - test_credentials_ok_drive_text_false_without_parent_folder
   - test_credentials_ok_drive_text_true_with_parent_folder
+  - test_other_company_server_not_visible_to_backup_user
   - test_credential_fields_not_readable_by_backup_user
   - test_credentials_ok_readable_by_backup_user
   - test_confirm_policy_disabled_raises_user_error
@@ -97,6 +98,19 @@ class TestBackupServer(EqpBackupsCommon):
     def test_credentials_ok_drive_text_true_with_parent_folder(self):
         server = self._create_server("drive", confirm=False)
         self.assertTrue(server.credentials_ok)
+
+    def test_other_company_server_not_visible_to_backup_user(self):
+        other_company = self.env["res.company"].create({"name": "Other Backup Co"})
+        other_server = self.BackupServer.create(
+            {
+                "name": "Other Company Server",
+                "backup_type": "local",
+                "company_id": other_company.id,
+            }
+        )
+        visible = self.BackupServer.with_user(self.backup_user).search([])
+        self.assertIn(self.server, visible)
+        self.assertNotIn(other_server, visible)
 
     def test_credential_fields_not_readable_by_backup_user(self):
         server = self._create_server("sftp").with_user(self.backup_user)
