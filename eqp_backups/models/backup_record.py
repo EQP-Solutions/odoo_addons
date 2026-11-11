@@ -32,7 +32,7 @@ import tempfile
 import subprocess
 
 from odoo import api, models, fields, _
-from odoo.service import db
+from odoo.modules import db
 from odoo.exceptions import UserError, ValidationError
 from datetime import datetime, timezone
 

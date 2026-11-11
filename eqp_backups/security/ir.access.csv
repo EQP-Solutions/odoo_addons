@@ -1,0 +1,8 @@
+id,name,model_id,group_id/id,operation,domain
+access_backup_record_user,backup.record.user,backup.record,eqp_backups.group_eqp_backups_user,cru,
+access_backup_server_user,backup.server.user,backup.server,eqp_backups.group_eqp_backups_user,r,
+access_backup_server_admin,backup.server.admin,backup.server,eqp_backups.group_eqp_backups_admin,cru,
+access_backup_ir_cron_admin,backup.ir_cron.admin,ir.cron,eqp_backups.group_eqp_backups_admin,cru,
+access_backup_dropbox_token_assignment_wizard,backup.dropbox.token.assignment.wizard,backup.dropbox.token.assignment.wizard,eqp_backups.group_eqp_backups_admin,crud,
+rule_backup_server_multi_company,Backup Server: multi-company,backup.server,,crud,"['|', ('company_id', '=', False), ('company_id', 'in', company_ids)]"
+rule_backup_record_multi_company,Backup Record: multi-company,backup.record,,crud,"['|', ('company_id', '=', False), ('company_id', 'in', company_ids)]"
