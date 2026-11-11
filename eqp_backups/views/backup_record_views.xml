@@ -24,7 +24,7 @@
                     <filter string="Inactive" name="filter_inactive"
                             domain="[('active', '=', False)]"/>
                     <separator/>
-                    <group string="Group By">
+                    <group>
                         <filter name="groupby_type" string="Type" context="{'group_by': 'type'}"/>
                         <filter name="groupby_user" string="Responsible" context="{'group_by': 'user_id'}"/>
                         <filter name="groupby_server" string="Server" context="{'group_by': 'server_id'}"/>
@@ -163,7 +163,6 @@
             <field name="name">Settings</field>
             <field name="res_model">res.config.settings</field>
             <field name="view_mode">form</field>
-            <field name="target">inline</field>
             <field name="context">{'module' : 'eqp_backups', 'bin_size': False}</field>
         </record>
 

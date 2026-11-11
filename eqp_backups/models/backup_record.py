@@ -301,19 +301,16 @@ class BackupRecord(models.Model):
         help="Access the details of the most recent execution here.",
     )
 
-    _sql_constraints = [
-        ("name_unique", "unique(name, company_id)", "A unique name per company."),
-        (
-            "unique_cron_id",
-            "UNIQUE(cron_id)",
-            "One Cron should only have one BackUp record.",
-        ),
-        (
-            "check_backup_lifespan_qty",
-            "CHECK(backup_lifespan_qty = -1 OR backup_lifespan_qty > 1)",
-            "The Backup span qty must be either -1 or greater than 1",
-        ),
-    ]
+    _name_unique = models.Constraint(
+        "unique(name, company_id)", "A unique name per company."
+    )
+    _unique_cron_id = models.Constraint(
+        "UNIQUE(cron_id)", "One Cron should only have one BackUp record."
+    )
+    _check_backup_lifespan_qty = models.Constraint(
+        "CHECK(backup_lifespan_qty = -1 OR backup_lifespan_qty > 1)",
+        "The Backup span qty must be either -1 or greater than 1",
+    )
 
     # Constraints
     @api.constrains("chunk_size")

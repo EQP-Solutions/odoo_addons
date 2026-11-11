@@ -18,7 +18,7 @@
                     <filter string="Inactive" name="filter_inactive"
                             domain="[('active', '=', False)]"/>
                     <separator/>
-                    <group string="Group By">
+                    <group>
                         <filter name="groupby_backup_type" string="Backup Type" context="{'group_by': 'backup_type'}"/>
                         <filter name="groupby_state" string="State" context="{'group_by': 'state'}"/>
                     </group>

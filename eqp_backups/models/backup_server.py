@@ -204,9 +204,9 @@ class BackupServer(models.Model):
     )
     record_ids = fields.One2many("backup.record", "server_id", string="Related Records")
 
-    _sql_constraints = [
-        ("name_unique", "unique(name, company_id)", "A unique name per company.")
-    ]
+    _name_unique = models.Constraint(
+        "unique(name, company_id)", "A unique name per company."
+    )
 
     # Constraints
     @api.constrains("server_port")
