@@ -11,7 +11,7 @@
         automated maintenance of the specified quantity of the most recent backups. With EQP Automatic Backup,
         users enjoy a streamlined and user-friendly solution for securing their Odoo data.
     """,
-    "version": "18.0.2.0",
+    "version": "18.0.2.1",
     "category": "Tools",
     "license": "LGPL-3",
     "images": ["static/description/eqp_backup.gif"],
@@ -21,6 +21,7 @@
         "Esteban Quevedo <esteban.quevedo@eqpsolutions.com>",
     ],
     "depends": ["base", "mail"],
+    "external_dependencies": {"python": ["paramiko"]},
     "data": [
         "security/eqp_backup_security.xml",
         "security/ir.model.access.csv",

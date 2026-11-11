@@ -105,7 +105,8 @@
                                        required="backup_type=='dropbox'" invisible="backup_type!='dropbox'"/>
                                 <field name="dropbox_app_token" class="password-limited" password="True"
                                        invisible="backup_type!='dropbox'"/>
-                                <div colspan="2" invisible="not active or not backup_type">
+                                <div colspan="2" invisible="not active or not backup_type"
+                                     groups="eqp_backups.group_eqp_backups_admin">
                                     <button name="generate_dropbox_token" type="object" class="btn-link oe_inline"
                                             string="Generate Token" icon="fa-id-card-o"
                                             invisible="backup_type!='dropbox' or not dropbox_app_key or not dropbox_app_secret or dropbox_app_token"/>

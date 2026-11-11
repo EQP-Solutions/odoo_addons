@@ -21,8 +21,8 @@
 #
 ##############################################################################
 
-from odoo import fields, models
-from odoo.exceptions import ValidationError
+from odoo import fields, models, _
+from odoo.exceptions import UserError
 
 
 class BackupDropboxTokenAssignmentWizard(models.TransientModel):
@@ -53,28 +53,34 @@ class BackupDropboxTokenAssignmentWizard(models.TransientModel):
         Sets a new Dropbox token for the related backup server using the provided access code.
 
         Raises:
-            ValidationError: If the access code is missing or if an error occurs during token generation.
+            UserError: If the access code is missing or if an error occurs during token generation.
         """
+        self.ensure_one()
         dropbox_access_code = self.dropbox_access_code
+        server = self.server_id
 
         if not dropbox_access_code:
-            raise ValidationError(
-                "Error: Missing Dropbox Access Code. Please ensure set the Access Code to set a New "
-                "Token."
-            )
-        else:
-            try:
-                import dropbox
-
-                server = self.server_id
-                dropbox_app_key = server.dropbox_app_key
-                dropbox_app_secret = server.dropbox_app_secret
-                dbx_auth = dropbox.oauth.DropboxOAuth2FlowNoRedirect(
-                    dropbox_app_key, dropbox_app_secret, token_access_type="offline"
+            raise UserError(
+                _(
+                    "Error: Missing Dropbox Access Code. Please ensure set the Access Code to set a New "
+                    "Token."
                 )
-                dbx_oauth = dbx_auth.finish(dropbox_access_code)
-                new_token = dbx_oauth.refresh_token
+            )
+        if server.backup_type != "dropbox":
+            raise UserError(
+                _("Error: The token can only be assigned to a Dropbox Backup Server.")
+            )
 
-                self.server_id.dropbox_app_token = new_token
-            except Exception as e:
-                raise ValidationError(f"Error: {e}.")
+        try:
+            import dropbox
+
+            dbx_auth = dropbox.oauth.DropboxOAuth2FlowNoRedirect(
+                server.dropbox_app_key,
+                server.dropbox_app_secret,
+                token_access_type="offline",
+            )
+            dbx_oauth = dbx_auth.finish(dropbox_access_code.strip())
+        except Exception as e:
+            raise UserError(_("Error: %s.", e))
+
+        server.dropbox_app_token = dbx_oauth.refresh_token
